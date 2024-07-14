@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    color-scheme: ligth dark;
+}
+
+
+html{
+
+    scroll-behavior: smooth;
+}
+
+body {
+    
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Onest", sans-serif;
+
+   
+
+}
+
+@media (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto;
+    }
+    
+}
