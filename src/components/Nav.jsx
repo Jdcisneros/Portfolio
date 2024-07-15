@@ -3,7 +3,7 @@
 
 function Nav() {
   return (
-    <div className="flex justify-center items-center  py-5 w-full xl:w-[1120px] ">
+    <div className="flex justify-center items-center  py-5 w-full xl:w-[1120px] mx-auto">
         
       <nav className="flex flex-row gap-x-10 opacity-80">
         <a href="#top">Inicio</a>

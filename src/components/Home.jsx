@@ -2,6 +2,8 @@ import avatar from "/avatar.jpeg";
 import Github from "./icons/github.jsx";
 import LinkedIn from "./icons/linkedin.jsx";
 import Mail from "./icons/mail.jsx"
+import ProjectosIcon from "./icons/projectosIcon.jsx";
+import Projectos from "./projectos.jsx";
 
 
 
@@ -48,15 +50,23 @@ function Home() {
           </a>
         </nav>
       </section>
-      <section  className="w-full lg:w-[740px]  mx-auto py-36 pb-20" id="proyectos">
-        <h2 className="font-semibold text-2xl mb-6">Proyectos</h2>
+      <section className="w-full lg:w-[740px]  mx-auto py-36 pb-20" id="proyectos">
+        <h2 className="font-semibold text-3xl mb-6 flex gap-x-3 items-center">
+        <ProjectosIcon className="size-4 lg:size-7"/>
+          Proyectos
+          </h2>
+        <Projectos/>
       </section>
       <section  className="w-full lg:w-[740px]  mx-auto py-36 pb-20" id="sobre-mi">
-        <h2 className="font-semibold text-2xl mb-6">Sobre mí</h2>
+      <h2 className="font-semibold text-3xl mb-6 flex gap-x-3 items-center">
+          Sobre mí
+          </h2>
       </section>
-      <section  className="w-full lg:w-[740px]  mx-auto py-36 pb-20" id="contacto">
-        <h2 className="font-semibold text-2xl mb-6">Contacto</h2>
-      </section>
+      {/* <section  className="w-full lg:w-[740px]  mx-auto py-36 pb-20" id="contacto">
+      <h2 className="font-semibold text-3xl mb-6 flex gap-x-3 items-center">
+          Contacto
+          </h2>
+      </section> */}
     </div>
   );
 }
