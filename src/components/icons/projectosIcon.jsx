@@ -7,7 +7,7 @@ const ProjectosIcon = (props) => (
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
-    stroke-width="2"
+    
     {...props}
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
