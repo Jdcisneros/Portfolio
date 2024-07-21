@@ -44,7 +44,7 @@ function Home() {
         </nav>
 
       </section>
-       <video autoPlay loop muted className="absolute top-0 left-0 object-cover w-full h-2/3 z-10 blur-sm">
+       <video autoPlay loop muted playsInline className="absolute top-0 left-0 object-cover w-full h-2/3 z-10 blur-sm">
       <source src={video2} type="video/mp4"/>
        </video>
       <section
