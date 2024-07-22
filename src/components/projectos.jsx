@@ -81,9 +81,9 @@ function Projectos() {
   return (
     <div>
       {PROYECTOS.map(({ title, description, tags, image }) => (
-        <article key={title} className="flex flex-row ">
+        <article key={title} className="flex lg:flex-row flex-col mb-10">
           <img
-            className="rounded shadow-2xl shadow-white/10 object-cover w-full h-64 transform hover:scale-105 transition duration-300"
+            className="rounded shadow-2xl lg:shadow-white/10 object-cover p-5 w-full h-64 lg:h-64 transform hover:scale-105 transition duration-300"
             src={image}
             alt={title}
           />
