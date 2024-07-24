@@ -104,7 +104,7 @@ function Projectos() {
                 <li key={index}>
                   {typeof tag === "object" ? (
                     <span
-                      className={`flex gap-x-2 rounded-full text-xs text-zinc-500 ${tag.className} py-1 px-2 mb-2`}
+                      className={`flex gap-x-2 rounded-full text-xs text-zinc-900 ${tag.className} py-1 px-2 mb-2`}
                     >
                       {tag.name}
                     </span>
