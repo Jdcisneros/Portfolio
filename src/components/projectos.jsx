@@ -6,6 +6,7 @@ import JavaScript from "./icons/javascript";
 import PostgreSQL from "./icons/postgresql";
 import React from "./icons/react";
 import Redux from "./icons/redux";
+import Tailwind from "./icons/tailwind";
 import fastfood from "./projectosImg/fastfood.webp";
 import countries from "./projectosImg/countries.jpg"
 
@@ -13,33 +14,38 @@ function Projectos() {
   const TAGS = {
     JAVASCRIPT: {
       name: "JavaScript",
-      className: "bg-black text-white",
+      className: "bg-orange-300 text-black",
       icon: JavaScript,
     },
     REACT: {
       name: "React",
-      className: "bg-black text-white",
+      className: "bg-orange-300 text-black",
       icon: React,
     },
     REDUX: {
       name: "Redux",
-      className: "bg-black text-white",
+      className: "bg-orange-300 text-black",
       icon: Redux,
     },
     CSS: {
       name: "CSS",
-      className: "bg-black text-white",
+      className:"bg-orange-300 text-black",
       icon: Css,
     },
     POSTGRESQL: {
       name: "PostgreSQL",
-      className: "bg-black text-white",
+      className: "bg-orange-300 text-black",
       icon: PostgreSQL,
     },
     EXPRESS: {
       name: "ExpressJS",
-      className: "bg-black text-white",
+      className:"bg-orange-300 text-black",
       icon: Expressjs,
+    },
+    TAILWIND: {
+      name: "Tailwind",
+      className: "bg-orange-300 text-black",
+      icon: Tailwind,
     },
   };
 
@@ -54,8 +60,9 @@ function Projectos() {
       tags: [
         TAGS.JAVASCRIPT,
         TAGS.REACT,
-        TAGS.REACT,
+        TAGS.REDUX,
         TAGS.CSS,
+        TAGS.TAILWIND,
         TAGS.EXPRESS,
         TAGS.POSTGRESQL,
       ],
@@ -70,7 +77,7 @@ function Projectos() {
       tags: [
         TAGS.JAVASCRIPT,
         TAGS.REACT,
-        TAGS.REACT,
+        TAGS.REDUX,
         TAGS.CSS,
         TAGS.EXPRESS,
         TAGS.POSTGRESQL,
@@ -81,14 +88,14 @@ function Projectos() {
   return (
     <div>
       {PROYECTOS.map(({ title, description, tags, image }) => (
-        <article key={title} className="flex lg:flex-row flex-col mb-10">
+        <article key={title} className="flex lg:flex-row flex-col mb-10 p-5 items-center">
           <img
-            className="rounded shadow-2xl lg:shadow-white/10 object-cover p-5 w-full h-64 lg:h-64 transform hover:scale-105 transition duration-300"
+            className="rounded object-cover p-2 w-full h-64 lg:h-72 lg:hover:scale- transition duration-300"
             src={image}
             alt={title}
           />
-          <div className="ml-5">
-            <h3 className="text-2xl font-semibold text-lime-700 mb-2">
+          <div className="ml-2">
+            <h3 className="text-2xl font-semibold text-orange-500 mb-2">
               {title}
             </h3>
             <p className=" mb-4 text-pretty">{description}</p>
@@ -97,9 +104,9 @@ function Projectos() {
                 <li key={index}>
                   {typeof tag === "object" ? (
                     <span
-                      className={`flex gap-x-2 rounded-full text-xs ${tag.className} py-1 px-2 mb-2`}
+                      className={`flex gap-x-2 rounded-full text-xs text-zinc-500 ${tag.className} py-1 px-2 mb-2`}
                     >
-                      <tag.icon className="size-4" /> {tag.name}
+                      {tag.name}
                     </span>
                   ) : (
                     <span>{tag}</span>
