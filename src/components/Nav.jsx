@@ -27,28 +27,28 @@ function Nav() {
         <nav className={`flex flex-row  rounded-full text-orange-100 lg:text-xl md:text-lg py-3 backdrop-blur-sm overflow-hidden transition duration-1000 ${isScrolled ? 'bg-white bg-opacity-5 ' : ''}`}>
           <a
             href="#top"
-            className={`nav-item hover:scale-110 hover:text-orange-500 px-3 mx-1 transition rounded-full opacity-90  ${activeItem === 'inicio' ? 'active bg-white bg-opacity-0  rounded-full backdrop-blur-sm transition text-orange-500 ' : ''}`}
+            className={`nav-item hover:scale-110 hover:text-orange-500 px-1 mx-1 transition rounded-full opacity-90  ${activeItem === 'inicio' ? 'active bg-white bg-opacity-0  rounded-full backdrop-blur-sm transition text-orange-500 ' : ''}`}
             onClick={() => handleItemClick('inicio')}
           >
             Inicio
           </a>
           <a
             href="#proyectos"
-            className={`nav-item hover:scale-110 hover:text-orange-500 px-3 mx-1 transition rounded-full opacity-90 ${activeItem === 'proyectos' ? 'active bg-white bg-opacity-0  rounded-full backdrop-blur-sm transition text-orange-500 ' : ''}`}
+            className={`nav-item hover:scale-110 hover:text-orange-500 px-1 mx-1 transition rounded-full opacity-90 ${activeItem === 'proyectos' ? 'active bg-white bg-opacity-0  rounded-full backdrop-blur-sm transition text-orange-500 ' : ''}`}
             onClick={() => handleItemClick('proyectos')}
           >
             Proyectos
           </a>
           <a 
             href="#sobre-mi"
-            className={`nav-item hover:scale-110 hover:text-orange-500 px-3 mx-1 transition rounded-full opacity-90 ${activeItem === 'sobre-mi' ? 'active bg-white bg-opacity-0  rounded-full backdrop-blur-sm transition text-orange-500 ' : ''}`}
+            className={`nav-item hover:scale-110 hover:text-orange-500 px-1 mx-1 transition rounded-full opacity-90 ${activeItem === 'sobre-mi' ? 'active bg-white bg-opacity-0  rounded-full backdrop-blur-sm transition text-orange-500 ' : ''}`}
             onClick={() => handleItemClick('sobre-mi')}
           >
             Sobre mí
           </a>
           <a 
             href="#contacto"
-            className={`nav-item hover:scale-110 hover:text-orange-500 px-3 mx-1 transition rounded-full opacity-90 ${activeItem === 'contacto' ? 'active bg-white bg-opacity-0  rounded-full backdrop-blur-sm transition text-orange-500 ' : ''}`}
+            className={`nav-item hover:scale-110 hover:text-orange-500 px-1 mx-1 transition rounded-full opacity-90 ${activeItem === 'contacto' ? 'active bg-white bg-opacity-0  rounded-full backdrop-blur-sm transition text-orange-500 ' : ''}`}
             onClick={() => handleItemClick('contacto')}
           >
             Contacto
