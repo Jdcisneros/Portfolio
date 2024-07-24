@@ -22,9 +22,9 @@ function Nav() {
   };
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50">
-      <div className="flex justify-center items-center py-10 w-full xl:w-[1120px] mx-auto brightness-60">
-        <nav className={`flex flex-row  rounded-full text-orange-100 lg:text-xl md:text-lg px-5 py-3 backdrop-blur-sm overflow-hidden transition duration-1000 ${isScrolled ? 'bg-white bg-opacity-5 ' : ''}`}>
+    <div className="fixed top-0 z-50">
+      <div className="flex justify-center items-center py-10 xl:w-[1120px] w-full px-2 mx-auto brightness-60">
+        <nav className={`flex flex-row  rounded-full text-orange-100 lg:text-xl md:text-lg py-3 backdrop-blur-sm overflow-hidden transition duration-1000 ${isScrolled ? 'bg-white bg-opacity-5 ' : ''}`}>
           <a
             href="#top"
             className={`nav-item hover:scale-110 hover:text-orange-500 px-3 mx-1 transition rounded-full opacity-90  ${activeItem === 'inicio' ? 'active bg-white bg-opacity-0  rounded-full backdrop-blur-sm transition text-orange-500 ' : ''}`}

@@ -80,7 +80,7 @@ function Home() {
         </svg>
       </a> */}
       <section
-        className="w-full lg:w-[860px] mx-auto lg:mt-5 mt-5"
+        className="w-full lg:w-[860px] mx-auto lg:mt-5 mt-5 z-30"
         id="proyectos"
       >
         <h2 className="font-semibold text-orange-200 text-3xl mb-6 flex gap-x-3 ml-7 items-center">
