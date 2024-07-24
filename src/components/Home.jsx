@@ -62,7 +62,7 @@ function Home() {
         loop
         muted
         playsInline
-        className="inset-0 fixed top-0 left-0 w-full h-full object-cover z-10 blur-sm opacity-10"
+        className="inset-0 fixed top-0 left-0 w-full h-full object-cover z-10 blur-sm opacity-60"
       >
         <source src={bg4} type="video/mp4" />
       </video>
