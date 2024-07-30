@@ -13,6 +13,7 @@ import Nav from "./Nav.jsx";
 import DownloadCV from "./DownloadCv.jsx";
 import About from "./about.jsx";
 import AboutMe from "./icons/aboutMe.jsx";
+import Footer from "./footer.jsx";
 
 function Home() {
   return (
@@ -35,7 +36,7 @@ function Home() {
 
         <nav className="flex gap-4 mt-16 flex-wrap justify-center items-center">
           <a
-            className="flex justify-center items-center gap-x-2 lg:py-2 lg:px-3 py-1 px-2  opacity-60 hover:text-orange-500  hover:opacity-100  transition duration-500"
+            className="flex justify-center items-center gap-x-2 lg:py-2 lg:px-3 py-1 px-2  opacity-60 hover:scale-110 hover:text-orange-500  hover:opacity-100  transition duration-500"
             href="https://www.linkedin.com/in/cisneros-jorge/"
             title="LikedIn"
           >
@@ -43,14 +44,14 @@ function Home() {
           </a>
 
           <a
-            className="flex justify-center items-center gap-x-2 lg:py-2 lg:px-3 py-1 px-2 opacity-60 hover:text-orange-500  hover:opacity-100 transition duration-500"
+            className="flex justify-center items-center gap-x-2 lg:py-2 lg:px-3 py-1 px-2 opacity-60 hover:scale-110 hover:text-orange-500  hover:opacity-100 transition duration-500"
             href="https://github.com/Jdcisneros"
             title="GitHub"
           >
             <Github className="size-6 lg:size-8" />
           </a>
           <a
-            className="flex justify-center items-center gap-x-2 lg:py-2 lg:px-3 py-1 px-2 opacity-60 hover:text-orange-500  hover:opacity-100  transition duration-500"
+            className="flex justify-center items-center gap-x-2 lg:py-2 lg:px-3 py-1 px-2 opacity-60 hover:scale-110 hover:text-orange-500  hover:opacity-100  transition duration-500"
             href="mailto:jorgecisneros761@gmail.com"
             title="Mail"
           >
@@ -107,7 +108,8 @@ function Home() {
           Contacto
           </h2>
       </section> */}
-      <div></div>
+      
+      <Footer/>
     </div>
   );
 }

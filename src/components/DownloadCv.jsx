@@ -15,7 +15,7 @@ function DownloadCV() {
     <div>
       <button 
         onClick={downloadCV}
-        className="flex justify-center items-center gap-x-2 bg-white rounded lg:py-1 lg:px-2 py-1 px-2 opacity-60 text-neutral-900 hover:bg-orange-500  hover:opacity-100 text-xs lg:text-base  transition duration-500"
+        className="flex justify-center items-center gap-x-2 bg-white rounded lg:py-[2px] lg:px-[5px] py-[3px] px-[6px] opacity-60 text-neutral-900 hover:bg-orange-500  hover:scale-110 hover:opacity-100 text-xs lg:text-base  transition duration-500"
         title="Descargar CV"
         >
         

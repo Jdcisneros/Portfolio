@@ -1,8 +1,8 @@
 function Footer() {
   return (
-    <footer className="rounded-lg shadow m-4 bg-white bg-opacity-0 backdrop-blur-3xl w-full xl:w-[1120px] mx-auto mb-10">
+    <footer className="rounded-lg m-4 bg-white bg-opacity-0 backdrop-blur-3xl w-full xl:w-[1120px] mx-auto mb-10 z-30">
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-        <span className="text-sm sm:text-center text-yellow-200/90">
+        <span className="text-sm sm:text-center text-orange-500">
           © 2024{" "}
           . Jorge Cisneros.
         </span>
