@@ -11,6 +11,8 @@ import bg4 from "../assets/bg6.mp4";
 
 import Nav from "./Nav.jsx";
 import DownloadCV from "./DownloadCv.jsx";
+import About from "./about.jsx";
+import AboutMe from "./icons/aboutMe.jsx";
 
 function Home() {
   return (
@@ -90,13 +92,16 @@ function Home() {
         <Projectos />
       </section>
       <section
-        className="w-full lg:w-[740px]  mx-auto py-36 pb-20 ml-7"
+        className="w-full lg:w-[860px] mx-auto lg:mt-5 mt-5 z-30"
         id="sobre-mi"
       >
-        <h2 className="font-semibold text-orange-200 text-3xl mb-6 flex gap-x-3 items-center">
+        <h2 className="font-semibold text-orange-200 text-3xl mb-6 flex gap-x-3 ml-7 items-center">
+        <AboutMe className="size-4 lg:size-7"/>
           Sobre mí
         </h2>
+        <About/>
       </section>
+      
       {/* <section  className="w-full lg:w-[740px]  mx-auto py-36 pb-20" id="contacto">
       <h2 className="font-semibold text-3xl mb-6 flex gap-x-3 items-center">
           Contacto
