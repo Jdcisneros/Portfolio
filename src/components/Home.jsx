@@ -15,28 +15,35 @@ import About from "./about.jsx";
 import AboutMe from "./icons/aboutMe.jsx";
 import Footer from "./footer.jsx";
 
+
+
 function Home() {
+
+
+
+
+
   return (
     // text-orange-100 text-orange-500
-    <div className="flex justify-center items-center flex-col animate-fade animate-duration-[3000ms] animate-delay-500 ">
+    <div className="flex justify-center items-center flex-col bg-slate-50 dark:bg-zinc-900 transition duration-1000 ">
       <Nav />
       <section
-        className="w-full lg:w-[740px] py-32 mt-20 pb-20 m-20 relative z-30"
+        className="w-full lg:w-[740px] py-32 mt-20 pb-20 m-20 relative z-30 transition duration-1000"
         id="top"
       >
-        <h3 className="text-orange-100  text-base font-extralight pb-4 lg:pb-0 lg:text-2xl md:text-4xl text-center ">
+        <h3 className="dark:text-orange-100 text-stone-900  text-base font-extralight pb-4 lg:pb-0 lg:text-2xl md:text-4xl text-center ">
           Hola! Mi nombre es
         </h3>
-        <h1 className="text-orange-500  text-7xl font-bold pb-4 lg:pb-2 lg:text-9xl md:text-4xl text-center ">
+        <h1 className="text-orange-500  text-7xl font-bold pb-4 lg:pb-2 lg:text-9xl  text-center">
           Jorge Cisneros
         </h1>
-        <h2 className="text-orange-200  text-3xl font-semibold pb-4 lg:pb-10 lg:text-5xl md:text-4xl text-center ">
+        <h2 className="dark:text-orange-200 text-stone-800  text-3xl font-semibold pb-4 lg:pb-10 lg:text-5xl md:text-4xl text-center ">
           FullStack Developer
         </h2>
 
         <nav className="flex gap-4 mt-16 flex-wrap justify-center items-center">
           <a
-            className="flex justify-center items-center gap-x-2 lg:py-2 lg:px-3 py-1 px-2  opacity-60 hover:scale-110 hover:text-orange-500  hover:opacity-100  transition duration-500"
+            className="flex justify-center items-center gap-x-2 lg:py-2 lg:px-3 py-1 px-2 dark:text-orange-100 text-stone-800   opacity-80  hover:scale-110 hover:text-orange-500  hover:opacity-100  transition duration-500"
             href="https://www.linkedin.com/in/cisneros-jorge/"
             title="LikedIn"
           >
@@ -44,20 +51,20 @@ function Home() {
           </a>
 
           <a
-            className="flex justify-center items-center gap-x-2 lg:py-2 lg:px-3 py-1 px-2 opacity-60 hover:scale-110 hover:text-orange-500  hover:opacity-100 transition duration-500"
+            className="flex justify-center items-center gap-x-2 lg:py-2 lg:px-3 py-1 px-2 dark:text-orange-100 text-stone-800  opacity-80  hover:scale-110  hover:text-orange-500  hover:opacity-100 transition duration-500"
             href="https://github.com/Jdcisneros"
             title="GitHub"
           >
             <Github className="size-6 lg:size-8" />
           </a>
           <a
-            className="flex justify-center items-center gap-x-2 lg:py-2 lg:px-3 py-1 px-2 opacity-60 hover:scale-110 hover:text-orange-500  hover:opacity-100  transition duration-500"
+            className="flex justify-center items-center gap-x-2 lg:py-2 lg:px-3 py-1 px-2 hover:scale-110 dark:text-orange-100 text-stone-800   opacity-80  hover:text-orange-500  hover:opacity-100  transition duration-500"
             href="mailto:jorgecisneros761@gmail.com"
             title="Mail"
           >
             <Mail className="size-8 lg:size-10" />
           </a>
-          <DownloadCV />
+          <DownloadCV/>
         </nav>
       </section>
       <video
@@ -65,7 +72,7 @@ function Home() {
         loop
         muted
         playsInline
-        className="inset-0 fixed top-0 left-0 w-full h-full object-cover z-10 blur-sm opacity-60"
+        className="inset-0 fixed top-0 left-0 w-full h-full object-cover z-10 blur-sm opacity-40 dark:opacity-60 "
       >
         <source src={bg4} type="video/mp4" />
       </video>

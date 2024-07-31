@@ -15,11 +15,11 @@ function DownloadCV() {
     <div>
       <button 
         onClick={downloadCV}
-        className="flex justify-center items-center gap-x-2 bg-white rounded lg:py-[2px] lg:px-[5px] py-[3px] px-[6px] opacity-60 text-neutral-900 hover:bg-orange-500  hover:scale-110 hover:opacity-100 text-xs lg:text-base  transition duration-500"
+        className="flex items-center dark:text-orange-100 text-stone-800   opacity-80  hover:text-orange-500 hover:opacity-100 hover:scale-110  transition duration-500"
         title="Descargar CV"
         >
         
-        <Download/>
+        <Download className="size-7 lg:size-[34px]"/>
       </button>
     </div>
   );

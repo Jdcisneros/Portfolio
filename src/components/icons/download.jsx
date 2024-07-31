@@ -1,22 +1,15 @@
-
-
-
-
 const Download = (props) => (
-    <svg
+  <svg
     xmlns="http://www.w3.org/2000/svg"
-    fill="none"
+    width={24}
+    height={24}
     viewBox="0 0 24 24"
-    strokeWidth={2.3}
-    stroke="currentColor"
-    className="lg:size-6 size-4"
+    fill="currentColor"
+    className="icon icon-tabler icons-tabler-filled icon-tabler-square-arrow-down"
     {...props}
   >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
-    />
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M19 2a3 3 0 0 1 3 3v14a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3 -3v-14a3 3 0 0 1 3 -3zm-7 5a1 1 0 0 0 -1 1v5.585l-2.293 -2.292l-.094 -.083a1 1 0 0 0 -1.32 1.497l4 4l.094 .083l.092 .064l.098 .052l.11 .044l.112 .03l.126 .017l.075 .003l.117 -.007l.149 -.029l.105 -.035l.113 -.054l.111 -.071a.939 .939 0 0 0 .112 -.097l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32l-.094 -.083a1 1 0 0 0 -1.32 .083l-2.293 2.292v-5.585l-.007 -.117a1 1 0 0 0 -.993 -.883z" />
   </svg>
-  );
-  export default Download;
+);
+export default Download;
