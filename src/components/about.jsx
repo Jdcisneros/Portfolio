@@ -2,7 +2,7 @@ import image from "../assets/ProfileImage.jpeg";
 
 function About() {
   return (
-    <div className="flex lg:flex-row flex-col mb-10 p-5 items-center">
+    <div className="flex md:flex-row lg:flex-row flex-col mb-10 p-5 items-center">
       <img src={image} alt="ProfileImage" className="rounded-3xl object-cover p-2 w-full h-64 lg:h-72 lg:hover:scale- transition duration-300" />
       <p className=" ml-5 mb-4 text-pretty">
         ¡Hola! Me llamo Jorge Cisneros y soy desarrollador Full Stack. Desde que

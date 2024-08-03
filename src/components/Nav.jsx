@@ -41,13 +41,13 @@ function Nav() {
     <div className="fixed top-0 z-50">
       <div className="flex justify-center items-center py-10 xl:w-[1120px] w-full px-3 mx-auto brightness-60">
         <nav
-          className={`flex flex-row px-2 rounded-full dark:text-orange-100 text-stone-900 text-xs sm:text-sm lg:text-xl md:text-lg py-3 backdrop-blur-sm overflow-hidden transition duration-1000 ${
-            isScrolled ? "bg-white bg-opacity-10 shadow-md" : ""
+          className={`flex flex-row px-2 rounded-full dark:text-orange-100 text-stone-900  sm:text-sm lg:text-2xl md:text-xl py-3 backdrop-blur-sm  overflow-hidden transition duration-1000 ${
+            isScrolled ? "bg-white bg-opacity-10" : ""
           }`}
         >
-          <a
+       <a
             href="#top"
-            className={`nav-item hover:scale-110 hover:text-orange-500 px-2 mx-1 transition rounded-full opacity-90  ${
+            className={`nav-item  hover:shadow hover:bg-white/20 dark:hover:bg-zinc-800/50 hover:text-orange-500 px-3 mx-1 transition rounded-full opacity-90${
               activeItem === "inicio"
                 ? "active bg-white bg-opacity-0  rounded-full backdrop-blur-sm transition text-orange-500 "
                 : ""
@@ -58,7 +58,7 @@ function Nav() {
           </a>
           <a
             href="#proyectos"
-            className={`nav-item hover:scale-110 hover:text-orange-500 px-2 mx-1 transition rounded-full opacity-90 ${
+            className={`nav-item  hover:shadow hover:bg-white/20 dark:hover:bg-zinc-800/50 hover:text-orange-500 px-3 mx-1 transition rounded-full opacity-90${
               activeItem === "proyectos"
                 ? "active bg-white bg-opacity-0  rounded-full backdrop-blur-sm transition text-orange-500 "
                 : ""
@@ -69,7 +69,7 @@ function Nav() {
           </a>
           <a
             href="#sobre-mi"
-            className={`nav-item hover:scale-110 hover:text-orange-500 px-2 mx-1 transition rounded-full opacity-90 ${
+            className={`nav-item  hover:shadow hover:bg-white/20 dark:hover:bg-zinc-800/50 hover:text-orange-500 px-3 mx-1 transition rounded-full opacity-90${
               activeItem === "sobre-mi"
                 ? "active bg-white bg-opacity-0  rounded-full backdrop-blur-sm transition text-orange-500 "
                 : ""
@@ -79,11 +79,11 @@ function Nav() {
             Sobre mí
           </a>
           <button
-            className={`nav-item hover:scale-110 hover:text-orange-500 px-2 mx-1 transition rounded-full opacity-90 ${
-              activeItem === "contacto"
-                ? "active bg-white bg-opacity-0  rounded-full backdrop-blur-sm transition text-orange-500 "
-                : ""
-            }`}
+           className={`nav-item  hover:shadow hover:bg-white/20 dark:hover:bg-zinc-800/50 hover:text-orange-500 px-3 mx-1 transition rounded-full opacity-90${
+            activeItem === "sun-dark"
+              ? "active bg-white bg-opacity-0  rounded-full backdrop-blur-sm transition text-orange-500 "
+              : ""
+          }`}
             onClick={handleChangeTheme}
           >
            {theme=== 'dark' ? <Sun/> : <Moon/> }

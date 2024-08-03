@@ -29,3 +29,43 @@ body {
     }
     
 }
+
+
+
+@keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-slide-in-left {
+    animation: slideIn 1s forwards;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInFromRight 1s forwards;
+  }

@@ -9,42 +9,36 @@ import Redux from "./icons/redux";
 import Tailwind from "./icons/tailwind";
 import fastfood from "./projectosImg/fastfood.webp";
 import countries from "./projectosImg/countries.jpg"
+import Carousel from "./carousel";
 
 function Projectos() {
   const TAGS = {
     JAVASCRIPT: {
       name: "JavaScript",
-      className: "bg-orange-300 text-black",
       icon: JavaScript,
     },
     REACT: {
       name: "React",
-      className: "bg-orange-300 text-black",
       icon: React,
     },
     REDUX: {
       name: "Redux",
-      className: "bg-orange-300 text-black",
       icon: Redux,
     },
     CSS: {
       name: "CSS",
-      className:"bg-orange-300 text-black",
       icon: Css,
     },
     POSTGRESQL: {
       name: "PostgreSQL",
-      className: "bg-orange-300 text-black",
       icon: PostgreSQL,
     },
     EXPRESS: {
       name: "ExpressJS",
-      className:"bg-orange-300 text-black",
       icon: Expressjs,
     },
     TAILWIND: {
       name: "Tailwind",
-      className: "bg-orange-300 text-black",
       icon: Tailwind,
     },
   };
@@ -87,36 +81,46 @@ function Projectos() {
 
   return (
     <div>
+      <div>
+      <Carousel>
+
+      
+      
       {PROYECTOS.map(({ title, description, tags, image }) => (
-        <article key={title} className="flex lg:flex-row flex-col mb-10 p-5 items-center">
+        <article key={title} className="relative flex lg:flex-row flex-col mb-10 p-5 items-center">
           <img
-            className="rounded-3xl object-cover p-2 w-full h-64 lg:h-72 lg:hover:scale- transition duration-300"
+            className="rounded-3xl object-cover p-2 w-full lg:w-3/6 h-64 lg:h-72 transition-transform duration-300"
             src={image}
             alt={title}
           />
-          <div className="ml-2">
-            <h3 className="text-2xl font-semibold text-orange-500 mb-2">
-              {title}
-            </h3>
-            <p className=" mb-4 text-pretty">{description}</p>
-            <ul className="flex gap-x-2 flex-row mb-2 flex-wrap">
-              {tags.map((tag, index) => (
-                <li key={index}>
-                  {typeof tag === "object" ? (
-                    <span
-                      className={`flex gap-x-2 rounded-full text-xs text-stone-950 ${tag.className} py-1 px-2 mb-2`}
-                    >
-                      {tag.name}
-                    </span>
-                  ) : (
-                    <span>{tag}</span>
-                  )}
-                </li>
-              ))}
-            </ul>
+          <div className="absolute lg:left-2/4 left-0 flex justify-center items-center lg:-m-5">
+            <div className="bg-orange-500 p-3 rounded-lg shadow-lg text-center  lg:max-w-xl">
+              <h3 className="text-2xl font-semibold text-stone-800 mb-2">
+                {title}
+              </h3>
+              <p className="mb-4 text-white">{description}</p>
+              <ul className="flex gap-x-2 flex-row mb-2 flex-wrap">
+                {tags.map((tag, index) => (
+                  <li key={index}>
+                    {typeof tag === "object" ? (
+                      <span
+                        className={`flex gap-x-2 rounded-full text-xs bg-stone-800 text-orange-200 py-1 px-2 mb-2`}
+                      >
+                        {tag.name}
+                      </span>
+                    ) : (
+                      <span>{tag}</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </article>
       ))}
+      </Carousel>
+    </div>
+    
     </div>
   );
 }

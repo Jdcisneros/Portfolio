@@ -13,7 +13,9 @@ function Footer() {
             </a>
           </li>
           <li className="hover:scale-110 hover:text-orange-500 transition">
-            <a href="#contacto" className=" me-4 md:me-6">
+            <a className=" me-4 md:me-6"
+            href="mailto:jorgecisneros761@gmail.com"
+            >
               Contacto
             </a>
           </li>
