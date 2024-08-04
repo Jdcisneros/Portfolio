@@ -38,10 +38,10 @@ function Nav() {
   };
 
   return (
-    <div className="fixed top-0 z-50">
-      <div className="flex justify-center items-center py-10 xl:w-[1120px] w-full px-3 mx-auto brightness-60">
+    <div className="fixed top-0  z-50">
+      <div className="flex justify-center items-center py-1 xl:w-[1120px] w-full  px-3 mx-auto brightness-60">
         <nav
-          className={`flex flex-row px-2 rounded-full dark:text-orange-100 text-stone-900  sm:text-sm lg:text-2xl md:text-xl py-3 backdrop-blur-sm  overflow-hidden transition duration-1000 ${
+          className={`flex flex-row px-2 rounded-full dark:text-orange-100 text-stone-900  sm:text-sm lg:text-2xl md:text-xl py-2 backdrop-blur-sm  overflow-hidden transition duration-1000 ${
             isScrolled ? "bg-white bg-opacity-10" : ""
           }`}
         >

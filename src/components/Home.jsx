@@ -9,28 +9,19 @@ import Projectos from "./projectos.jsx";
 // import bg1 from "../assets/bg1.jpg"
 // import bg2 from "../assets/bg3.jpg"
 
-
 import Nav from "./Nav.jsx";
 import DownloadCV from "./DownloadCv.jsx";
 import About from "./about.jsx";
 import AboutMe from "./icons/aboutMe.jsx";
 import Footer from "./footer.jsx";
 
-
-
 function Home() {
-
-
-
-
-
   return (
     // text-orange-100 text-orange-500
     <div className="flex justify-center items-center flex-col bg-zinc-200 dark:bg-zinc-900 transition duration-1000 ">
-      
       <Nav />
       <section
-        className="w-[340px] lg:w-[740px] md:w-[440px] lg:m-3 md:m-2 py-32  pb-20 m-3 relative z-30 transition duration-1000"
+        className="w-[340px] lg:w-[740px] md:w-[440px]  md:m-2 py-32  pb-20 m-3 relative z-30 transition duration-1000"
         id="top"
       >
         <h3 className="dark:text-orange-100 text-stone-900  text-base font-extralight pb-4 lg:pb-0 lg:text-2xl md:text-2xl text-center  animate-slide-in-right ">
@@ -42,6 +33,12 @@ function Home() {
         <h2 className="dark:text-orange-200 text-stone-800  text-3xl font-semibold pb-4 lg:pb-10 lg:text-5xl md:text-4xl text-center animate-slide-in-right ">
           FullStack Developer
         </h2>
+        <p className="dark:text-orange-100 text-stone-900  text-base font-extralight pb-4 lg:pb-0 lg:text-2xl md:text-2xl text-center  animate-slide-in-right ">
+          Soy desarrollador web de Rosario, Argentina, con experiencia en
+          fullstack. Me enfoco en crear interfaces intuitivas y en desarrollar
+          aplicaciones web completas que ofrecen una experiencia de usuario
+          fluida y eficiente.
+        </p>
 
         <nav className="flex gap-4 mt-16 flex-wrap justify-center items-center">
           <a
@@ -61,7 +58,7 @@ function Home() {
           >
             <Github className="size-6 lg:size-8" />
           </a>
-          
+
           <a
             className="flex justify-center items-center gap-x-2 lg:py-2 lg:px-3 py-1 px-2  dark:text-orange-100 text-stone-800   opacity-80  dark:hover:text-orange-500  hover:text-orange-500  hover:opacity-100  transition duration-500"
             href="mailto:jorgecisneros761@gmail.com"
@@ -70,35 +67,10 @@ function Home() {
           >
             <Mail className="size-8 lg:size-10" />
           </a>
-          <DownloadCV/>
+          <DownloadCV />
         </nav>
       </section>
-      {/* <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="inset-0 fixed top-0 left-0 w-full h-full object-cover z-10 blur-sm opacity-40 dark:opacity-60 "
-      >
-        <source src={bg4} type="video/mp4" />
-      </video> */}
-      {/* <a
-        href="#proyectos"
-        className="text-orange-200 hover:text-orange-700 transition duration-500 flex items-center mt-4"
-      >
-        Proyectos
-        <svg className="w-4 h-4 ml-2" viewBox="0 0 20 20" fill="currentColor">
-          <path
-            fillRule="evenodd"
-            d="M10 3a.75.75 0 01.75.75v9.5l2.72-2.72a.75.75 0 111.06 1.06l-4.25 4.25a.75.75 0 01-1.06 0l-4.25-4.25a.75.75 0 111.06-1.06L9.25 13.25V3.75A.75.75 0 0110 3z"
-            clipRule="evenodd"
-          />
-        </svg>
-      </a> */}
-      <section
-        className="w-full lg:w-[1230px] mx-auto mt-5 z-30"
-        id="proyectos"
-      >
+      <section className=" z-30" id="proyectos">
         <h2 className="font-semibold text-stone-900 dark:text-orange-200  text-3xl mb-32 flex lg:mt-32 items-center justify-center">
           <ProjectosIcon className="size-4 lg:size-7" />
           Proyectos
@@ -106,23 +78,23 @@ function Home() {
         <Projectos />
       </section>
       <section
-        className="w-full lg:w-[860px] mx-auto lg:mt-5 mt-5 z-30"
+        className="w-full lg:w-[860px] mx-auto lg:mt-20 mt-5 z-30 "
         id="sobre-mi"
       >
         <h2 className="font-semibold text-stone-900 dark:text-orange-200 text-3xl mb-6 flex gap-x-3 ml-7 items-center justify-center">
-        <AboutMe className="size-4 lg:size-7"/>
+          <AboutMe className="size-4 lg:size-7" />
           Sobre mí
         </h2>
-        <About/>
+        <About />
       </section>
-      
+
       {/* <section  className="w-full lg:w-[740px]  mx-auto py-36 pb-20" id="contacto">
       <h2 className="font-semibold text-3xl mb-6 flex gap-x-3 items-center">
           Contacto
           </h2>
       </section> */}
-      
-      <Footer/>
+
+      <Footer />
     </div>
   );
 }

@@ -8,7 +8,7 @@ import React from "./icons/react";
 import Redux from "./icons/redux";
 import Tailwind from "./icons/tailwind";
 import fastfood from "./projectosImg/fastfood.webp";
-import countries from "./projectosImg/countries.jpg"
+import countries from "./projectosImg/countries.jpg";
 import Carousel from "./carousel";
 
 function Projectos() {
@@ -65,7 +65,7 @@ function Projectos() {
       title: "Countries App",
       description:
         "Sitio web interactivo con información detallada de países desde una API interna. Permite explorar datos como continente, población y actividades locales. Incluye funcionalidades para crear actividades, filtros por continente y actividad, ordenamientos y buscador.",
-        link: "",
+      link: "",
       github: "https://github.com/Jdcisneros/cr-pi-countries-main",
       image: countries,
       tags: [
@@ -80,47 +80,44 @@ function Projectos() {
   ];
 
   return (
-    <div>
-      <div>
+    <div className="w-max ">
       <Carousel>
-
-      
-      
-      {PROYECTOS.map(({ title, description, tags, image }) => (
-        <article key={title} className="relative flex lg:flex-row flex-col mb-10 p-5 items-center">
-          <img
-            className="rounded-3xl object-cover p-2 w-full lg:w-3/6 h-64 lg:h-72 transition-transform duration-300"
-            src={image}
-            alt={title}
-          />
-          <div className="absolute lg:left-2/4 left-0 flex justify-center items-center lg:-m-5">
-            <div className="bg-orange-500 p-3 rounded-lg shadow-lg text-center  lg:max-w-xl">
-              <h3 className="text-2xl font-semibold text-stone-800 mb-2">
-                {title}
-              </h3>
-              <p className="mb-4 text-white">{description}</p>
-              <ul className="flex gap-x-2 flex-row mb-2 flex-wrap">
-                {tags.map((tag, index) => (
-                  <li key={index}>
-                    {typeof tag === "object" ? (
-                      <span
-                        className={`flex gap-x-2 rounded-full text-xs bg-stone-800 text-orange-200 py-1 px-2 mb-2`}
-                      >
-                        {tag.name}
-                      </span>
-                    ) : (
-                      <span>{tag}</span>
-                    )}
-                  </li>
-                ))}
-              </ul>
+        {PROYECTOS.map(({ title, description, tags, image }) => (
+          <article
+            key={title}
+            className="relative flex lg:flex-row flex-col px-10  items-center min-w-full"
+          >
+            <img
+              className="rounded-3xl object-cover p-2 w-full lg:w-3/6 h-64 lg:h-96 transition-transform duration-300"
+              src={image}
+              alt={title}
+            />
+            <div className="absolute lg:left-[30rem] left-0 flex justify-center items-center m-2">
+              <div className="bg-orange-500 p-3 rounded-lg shadow-lg text-center">
+                <h3 className="text-2xl font-semibold text-stone-800 mb-2">
+                  {title}
+                </h3>
+                <p className="mb-4 text-white">{description}</p>
+                <ul className="flex gap-x-2 flex-row mb-2 flex-wrap">
+                  {tags.map((tag, index) => (
+                    <li key={index}>
+                      {typeof tag === "object" ? (
+                        <span
+                          className={`flex gap-x-2 rounded-full text-xs bg-stone-800 text-orange-200 py-1 px-2 mb-2`}
+                        >
+                          {tag.name}
+                        </span>
+                      ) : (
+                        <span>{tag}</span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
-        </article>
-      ))}
+          </article>
+        ))}
       </Carousel>
-    </div>
-    
     </div>
   );
 }
