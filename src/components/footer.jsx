@@ -6,7 +6,7 @@ function Footer() {
           © 2024{" "}
           . Jorge Cisneros.
         </span>
-        <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-white/90 sm:mt-0">
+        <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-stone-900 dark:text-orange-200 sm:mt-0">
           <li className="hover:scale-110 hover:text-orange-500 transition">
             <a href="#sobre-mi" className=" me-4 md:me-6">
               Sobre mí

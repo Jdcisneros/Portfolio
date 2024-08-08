@@ -18,7 +18,7 @@ import Footer from "./footer.jsx";
 function Home() {
   return (
     // text-orange-100 text-orange-500
-    <div className="flex justify-center items-center flex-col bg-zinc-200 dark:bg-zinc-900 transition duration-1000 ">
+    <div className="flex flex-col items-center bg-zinc-200 dark:bg-zinc-900 transition duration-1000 ">
       <Nav />
       <section
         className="w-[340px] lg:w-[740px] md:w-[440px]  md:m-2 py-32  pb-20 m-3 relative z-30 transition duration-1000"

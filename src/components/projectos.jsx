@@ -80,25 +80,25 @@ function Projectos() {
   ];
 
   return (
-    <div className="w-max ">
+    <div className="lg:w-max ">
       <Carousel>
         {PROYECTOS.map(({ title, description, tags, image }) => (
           <article
             key={title}
-            className="relative flex lg:flex-row flex-col px-10  items-center min-w-full"
+            className="lg:relative flex lg:flex-row flex-col px-10  items-center min-w-full"
           >
             <img
               className="rounded-3xl object-cover p-2 w-full lg:w-3/6 h-64 lg:h-96 transition-transform duration-300"
               src={image}
               alt={title}
             />
-            <div className="absolute lg:left-[30rem] left-0 flex justify-center items-center m-2">
+            <div className="lg:absolute lg:left-[40rem] left-0 flex justify-center items-center m-2">
               <div className="bg-orange-500 p-3 rounded-lg shadow-lg text-center">
                 <h3 className="text-2xl font-semibold text-stone-800 mb-2">
                   {title}
                 </h3>
                 <p className="mb-4 text-white">{description}</p>
-                <ul className="flex gap-x-2 flex-row mb-2 flex-wrap">
+                <ul className="flex gap-x-2 flex-row mb-2 flex-wrap justify-center">
                   {tags.map((tag, index) => (
                     <li key={index}>
                       {typeof tag === "object" ? (

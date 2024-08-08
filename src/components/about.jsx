@@ -4,7 +4,7 @@ function About() {
   return (
     <div className="flex md:flex-row lg:flex-row flex-col mb-10 p-5 items-center">
       <img src={image} alt="ProfileImage" className="rounded-3xl object-cover p-2 w-full h-64 lg:h-72 lg:hover:scale- transition duration-300" />
-      <p className=" ml-5 mb-4 text-pretty">
+      <p className=" ml-5 mb-4 text-pretty text-stone-900 dark:text-orange-200">
         ¡Hola! Me llamo Jorge Cisneros y soy desarrollador Full Stack. Desde que
         comencé a programar, he desarrollado una verdadera pasión por crear y
         diseñar aplicaciones web. Me especializo en construir interfaces
