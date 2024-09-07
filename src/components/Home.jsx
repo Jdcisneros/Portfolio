@@ -70,8 +70,8 @@ function Home() {
           <DownloadCV />
         </nav>
       </section>
-      <section className=" z-30" id="proyectos">
-        <h2 className="font-semibold text-stone-900 dark:text-orange-200  text-3xl mb-32 flex lg:mt-32 items-center justify-center">
+      <section className=" w-full z-30" id="proyectos">
+        <h2 className="font-semibold text-stone-900 dark:text-orange-200  text-3xl flex lg:mt-32 items-center justify-center">
           <ProjectosIcon className="size-4 lg:size-7" />
           Proyectos
         </h2>
