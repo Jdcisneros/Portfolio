@@ -1,11 +1,19 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import Sun from "./icons/sun";
-import Moon from "./icons/moon";
+
+import { MdSunny } from "react-icons/md";
+import { IoMdMoon } from "react-icons/io";
+import imagePerfil from "../assets/ProfileImage.jpeg";
+import { HiMenu, HiX } from "react-icons/hi";
 
 function Nav() {
   const [activeItem, setActiveItem] = useState("top");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,70 +46,98 @@ function Nav() {
   };
 
   return (
-    <div className="fixed top-0  z-50">
-      <div className="flex justify-center items-center py-1 xl:w-[1120px] w-full  px-3 mx-auto brightness-60">
-        <nav
-          className={`flex flex-row px-2 rounded-full dark:text-orange-100 text-stone-900  sm:text-sm lg:text-2xl md:text-xl py-2 backdrop-blur-sm  overflow-hidden transition duration-1000 ${
-            isScrolled ? "bg-white bg-opacity-10" : ""
-          }`}
-        >
-       <a
-            href="#top"
-            className={`nav-item  hover:shadow hover:bg-white/20 dark:hover:bg-zinc-800/50 hover:text-orange-500 px-3 mx-1 transition rounded-full opacity-90${
-              activeItem === "inicio"
-                ? "active bg-white bg-opacity-0  rounded-full backdrop-blur-sm transition text-orange-500 "
-                : ""
-            }`}
-            onClick={() => handleItemClick("inicio")}
-          >
-            Inicio
-          </a>
-          <a
-            href="#proyectos"
-            className={`nav-item  hover:shadow hover:bg-white/20 dark:hover:bg-zinc-800/50 hover:text-orange-500 px-3 mx-1 transition rounded-full opacity-90${
-              activeItem === "proyectos"
-                ? "active bg-white bg-opacity-0  rounded-full backdrop-blur-sm transition text-orange-500 "
-                : ""
-            }`}
-            onClick={() => handleItemClick("proyectos")}
-          >
-            Proyectos
-          </a>
-          <a
-            href="#sobre-mi"
-            className={`nav-item  hover:shadow hover:bg-white/20 dark:hover:bg-zinc-800/50 hover:text-orange-500 px-3 mx-1 transition rounded-full opacity-90${
-              activeItem === "sobre-mi"
-                ? "active bg-white bg-opacity-0  rounded-full backdrop-blur-sm transition text-orange-500 "
-                : ""
-            }`}
-            onClick={() => handleItemClick("sobre-mi")}
-          >
-            Sobre mí
-          </a>
-          <button
-           className={`nav-item  hover:shadow hover:bg-white/20 dark:hover:bg-zinc-800/50 hover:text-orange-500 px-3 mx-1 transition rounded-full opacity-90${
-            activeItem === "sun-dark"
-              ? "active bg-white bg-opacity-0  rounded-full backdrop-blur-sm transition text-orange-500 "
-              : ""
-          }`}
-            onClick={handleChangeTheme}
-          >
-           {theme=== 'dark' ? <Sun/> : <Moon/> }
-          </button>
+    <div className="fixed top-0 w-full z-50">
+      <nav
+        className={`flex items-center justify-between p-4 shadow-md${
+          isScrolled ? "bg-opacity-90" : "bg-opacity-100"
+        }  backdrop-blur-sm`}
+      >
+        <div className="flex items-center">
+          <img
+            src={imagePerfil}
+            alt="Profile"
+            className="w-14 h-14 rounded-full object-cover border-2 border-orange-500"
+          />
+          <h2 className="text-zinc-900 dark:text-orange-200 text-md font-semibold ml-3">
+            Jorge Cisneros
+          </h2>
+        </div>
 
-          <div
-            className={`indicator ${
-              activeItem === "inicio"
-                ? "left-0"
-                : activeItem === "proyectos"
-                ? "left-1/4"
-                : activeItem === "sobre-mi"
-                ? "left-2/4"
-                : "left-3/4"
-            }`}
-          ></div>
-        </nav>
-      </div>
+        <div className="lg:hidden flex items-center">
+          <button
+            className="text-zinc-900 dark:text-orange-200"
+            onClick={toggleMenu}
+          >
+            {isOpen ? (
+              ""
+            ) : (
+              <HiMenu className="w-6 h-6" />
+            )}
+          </button>
+        </div>
+
+        <div
+          className={`lg:flex lg:items-center lg:justify-end lg:space-x-4 fixed inset-0 h-screen lg:h-auto bg-zinc-950/90 lg:bg-inherit dark:bg-zinc-50/90 transition-transform duration-500 transform ${
+            isOpen ? "translate-x-0" : "translate-x-full"
+          } lg:translate-x-0`}
+        >
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-8 right-4 dark:text-zinc-900 text-orange-200 text-2xl lg:hidden"
+          >
+            <HiX size={25} />
+          </button>
+          <div className="dark:text-zinc-950 text-orange-200 font-semibold flex flex-col items-center justify-center w-full h-full  lg:flex-row lg:w-auto">
+            <a
+              href="#top"
+              className={`hover:scale-110 sm:text-2xl hover:text-orange-500 px-4 py-2 transition opacity-90 ${
+                activeItem === "inicio"
+                  ? " bg-opacity-0   text-orange-500"
+                  : ""
+              }`}
+              onClick={() => handleItemClick("inicio")}
+            >
+              Inicio
+            </a>
+            <a
+              href="#proyectos"
+              className={`hover:scale-110 hover:text-orange-500 px-4 py-2 transition opacity-90 ${
+                activeItem === "proyectos"
+                  ? "bg-white bg-opacity-0 rounded-full backdrop-blur-sm text-orange-500"
+                  : ""
+              }`}
+              onClick={() => handleItemClick("proyectos")}
+            >
+              Proyectos
+            </a>
+            <a
+              href="#sobre-mi"
+              className={`hover:scale-110 hover:text-orange-500 px-4 py-2 transition opacity-90 ${
+                activeItem === "sobre-mi"
+                  ? "bg-white bg-opacity-0 rounded-full backdrop-blur-sm text-orange-500"
+                  : ""
+              }`}
+              onClick={() => handleItemClick("sobre-mi")}
+            >
+              Sobre mí
+            </a>
+            <button
+              className={`hover:scale-110 hover:text-orange-500 px-4 py-2 transition opacity-90 ${
+                activeItem === "sun-dark"
+                  ? "bg-white bg-opacity-0 rounded-full backdrop-blur-sm text-orange-500"
+                  : ""
+              }`}
+              onClick={handleChangeTheme}
+            >
+              {theme === "dark" ? (
+                <MdSunny className="w-6 h-6 mb-2" />
+              ) : (
+                <IoMdMoon className="w-6 h-6 mb-2" />
+              )}
+            </button>
+          </div>
+        </div>
+      </nav>
     </div>
   );
 }

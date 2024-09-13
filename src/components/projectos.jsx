@@ -1,45 +1,43 @@
 // import fastfood from "../assets/fastfood.webp"
 
-import Css from "./icons/css";
-import Expressjs from "./icons/express";
-import JavaScript from "./icons/javascript";
-import PostgreSQL from "./icons/postgresql";
-import React from "./icons/react";
-import Redux from "./icons/redux";
-import Tailwind from "./icons/tailwind";
+
 import fastfood from "./projectosImg/fastfood.webp";
 import countries from "./projectosImg/countries.jpg";
 import Carousel from "./carousel";
+import { IoLogoCss3, IoLogoJavascript } from "react-icons/io";
+import { IoLogoReact } from "react-icons/io5";
+import { BiLogoPostgresql, BiLogoRedux, BiLogoTailwindCss } from "react-icons/bi";
+import { SiExpress } from "react-icons/si";
 
 function Projectos() {
   const TAGS = {
     JAVASCRIPT: {
       name: "JavaScript",
-      icon: JavaScript,
+      icon:<IoLogoJavascript />,
     },
     REACT: {
       name: "React",
-      icon: React,
+      icon: <IoLogoReact />,
     },
     REDUX: {
       name: "Redux",
-      icon: Redux,
+      icon: <BiLogoRedux />,
     },
     CSS: {
       name: "CSS",
-      icon: Css,
+      icon: <IoLogoCss3 />,
     },
     POSTGRESQL: {
       name: "PostgreSQL",
-      icon: PostgreSQL,
+      icon: <BiLogoPostgresql />,
     },
     EXPRESS: {
       name: "ExpressJS",
-      icon: Expressjs,
+      icon: <SiExpress />,
     },
     TAILWIND: {
       name: "Tailwind",
-      icon: Tailwind,
+      icon: <BiLogoTailwindCss />,
     },
   };
 
@@ -105,8 +103,16 @@ function Projectos() {
                         <span
                           className={`flex gap-x-2 rounded-full text-xs bg-stone-800 text-orange-200 py-1 px-2 mb-2`}
                         >
+                          <div>
+
                           {tag.name}
+                          </div>
+                          <div className="text-sm items-center flex justify-center">
+
+                          {tag.icon}
+                          </div>
                         </span>
+                       
                       ) : (
                         <span>{tag}</span>
                       )}
