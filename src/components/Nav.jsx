@@ -77,7 +77,7 @@ function Nav() {
         </div>
 
         <div
-          className={`lg:flex lg:items-center lg:justify-end lg:space-x-4 fixed inset-0 h-screen lg:h-auto bg-zinc-950/90 lg:bg-inherit dark:bg-zinc-50/90 transition-transform duration-500 transform ${
+          className={`lg:flex lg:items-center lg:justify-end lg:space-x-4 fixed inset-0 h-screen lg:h-auto bg-zinc-950/90 dark:lg:bg-inherit lg:bg-inherit dark:bg-zinc-50/90 transition-transform duration-500 transform ${
             isOpen ? "translate-x-0" : "translate-x-full"
           } lg:translate-x-0`}
         >
@@ -87,10 +87,10 @@ function Nav() {
           >
             <HiX size={25} />
           </button>
-          <div className="dark:text-zinc-950 text-orange-200 font-semibold flex flex-col items-center justify-center w-full h-full  lg:flex-row lg:w-auto">
+          <div className="dark:text-zinc-950 dark:lg:text-orange-200 text-orange-200 lg:text-zinc-900 font-semibold flex flex-col items-center justify-center w-full h-full  lg:flex-row lg:w-auto">
             <a
               href="#top"
-              className={`hover:scale-110 sm:text-2xl hover:text-orange-500 px-4 py-2 transition opacity-90 ${
+              className={`hover:scale-110 text-2xl lg:text-xl hover:text-orange-500 px-4 py-2 transition opacity-90 ${
                 activeItem === "inicio"
                   ? " bg-opacity-0   text-orange-500"
                   : ""
@@ -101,9 +101,9 @@ function Nav() {
             </a>
             <a
               href="#proyectos"
-              className={`hover:scale-110 hover:text-orange-500 px-4 py-2 transition opacity-90 ${
+              className={`hover:scale-110 text-2xl lg:text-xl hover:text-orange-500 px-4 py-2 transition opacity-90 ${
                 activeItem === "proyectos"
-                  ? "bg-white bg-opacity-0 rounded-full backdrop-blur-sm text-orange-500"
+                  ? " bg-opacity-0   text-orange-500"
                   : ""
               }`}
               onClick={() => handleItemClick("proyectos")}
@@ -112,7 +112,7 @@ function Nav() {
             </a>
             <a
               href="#sobre-mi"
-              className={`hover:scale-110 hover:text-orange-500 px-4 py-2 transition opacity-90 ${
+              className={`hover:scale-110 text-2xl lg:text-xl hover:text-orange-500 px-4 py-2 transition opacity-90 ${
                 activeItem === "sobre-mi"
                   ? "bg-white bg-opacity-0 rounded-full backdrop-blur-sm text-orange-500"
                   : ""
@@ -130,9 +130,9 @@ function Nav() {
               onClick={handleChangeTheme}
             >
               {theme === "dark" ? (
-                <MdSunny className="w-6 h-6 mb-2" />
+                <MdSunny className="size-8 lg:size-6 mb-2" />
               ) : (
-                <IoMdMoon className="w-6 h-6 mb-2" />
+                <IoMdMoon className="size-8 lg:size-6 mb-2" />
               )}
             </button>
           </div>

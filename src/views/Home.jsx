@@ -51,8 +51,8 @@ function Home() {
         className="w-full lg:w-[860px] mx-auto lg:mt-20 mt-5 z-30 "
         id="sobre-mi"
       >
-        <h2 className="font-semibold text-stone-900 dark:text-orange-200 text-3xl mb-6 flex gap-x-3 ml-7 items-center justify-center">
-          <BsFillPersonCheckFill className="size-4 lg:size-7" />
+        <h2 className="font-semibold text-stone-900 dark:text-orange-200 text-2xl mb-6 flex gap-x-3  items-center justify-center">
+          <BsFillPersonCheckFill className="size-6 lg:size-7" />
           Sobre mí
         </h2>
         <About />
