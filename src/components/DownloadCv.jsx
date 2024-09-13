@@ -1,5 +1,6 @@
+
 import curriculumPDF from "../assets/JorgeCisneros.pdf"
-import Download from "./projectosImg/Download";
+import Download from "./projectosImg/Download.jsx";
 
 function DownloadCV() {
   const downloadCV = () => {
@@ -16,10 +17,10 @@ function DownloadCV() {
     <div>
       <button 
         onClick={downloadCV}
-        className="flex items-center dark:text-orange-100 text-stone-800   opacity-80 hover:scale-110 dark:hover:text-orange-500  hover:text-orange-500 transition duration-500"
-        title="Descargar CV"
+        className="flex justify-center items-center dark:text-orange-100 text-stone-800  opacity-80 dark:hover:text-orange-500  hover:text-orange-500 hover:scale-110 transition duration-500 px-3  lg:my-3"
+          title="Descargar CV"
         >
-        <Download className="size-7 lg:size-9"/>
+        <Download className="size-10 lg:size-[44px]"/>
        
       </button>
     </div>
