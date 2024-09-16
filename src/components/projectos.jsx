@@ -3,11 +3,14 @@
 
 import fastfood from "./projectosImg/fastfood.webp";
 import countries from "./projectosImg/countries.jpg";
-import Carousel from "./carousel";
+
 import { IoLogoCss3, IoLogoJavascript } from "react-icons/io";
 import { IoLogoReact } from "react-icons/io5";
 import { BiLogoPostgresql, BiLogoRedux, BiLogoTailwindCss } from "react-icons/bi";
 import { SiExpress } from "react-icons/si";
+
+import { ImGithub } from "react-icons/im";
+import { MdOutlineArrowOutward } from "react-icons/md";
 
 function Projectos() {
   const TAGS = {
@@ -78,54 +81,53 @@ function Projectos() {
   ];
 
   return (
-    <div className="lg:w-max ">
-      <Carousel>
-        {PROYECTOS.map(({ title, description, tags, image }) => (
-          <article
-            key={title}
-            className="lg:relative flex lg:flex-row flex-col px-10  items-center min-w-full "
-          >
-            <img
-              className="object-cover w-11/12 lg:w-3/6 h-64 lg:h-96 transition-transform duration-300 hover:scale-110 rounded-md"
-              src={image}
-              alt={title}
-            />
-            <div className="lg:absolute lg:left-[40rem] left-0 flex justify-center items-center m-2">
-              <div className="bg-orange-500 p-3 rounded-lg shadow-lg text-center">
-                <h3 className="text-2xl font-semibold text-stone-800 mb-2">
-                  {title}
-                </h3>
-                <p className="mb-4 text-white">{description}</p>
-                <ul className="flex gap-x-2 flex-row mb-2 flex-wrap justify-center">
-                  {tags.map((tag, index) => (
-                    <li key={index}>
-                      {typeof tag === "object" ? (
-                        <span
-                          className={`flex gap-x-2 rounded-full text-xs bg-stone-800 text-orange-200 py-1 px-2 mb-2`}
-                        >
-                          <div>
-
-                          {tag.name}
-                          </div>
-                          <div className="text-sm items-center flex justify-center">
-
-                          {tag.icon}
-                          </div>
-                        </span>
-                       
-                      ) : (
-                        <span>{tag}</span>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+    <div className="flex flex-col lg:flex-row lg:flex-wrap  justify-center gap-6 mt-10 p-5 ">
+      {PROYECTOS.map(({ title, description, tags, image, github }, index) => (
+        <article key={index} className="relative group items-center justify-center lg:w-2/6">
+          <img
+            className="object-cover w-full lg:w-fit h-72 lg:h-96 transition-transform shadow-md  duration-300  rounded-md"
+            src={image}
+            alt={title}
+          />
+          <div className="absolute top-0 left-0 flex items-center lg:w-fit justify-center lg:h-96 h-72 bg-black bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300  text-orange-200 text-center rounded-md">
+            <div className="">
+              <h3 className="text-lg lg:text-2xl text-orange-500 font-semibold mt-2">{title}</h3>
+              <p className="mb-4 p-5">{description}</p>
+              <ul className="flex gap-x-2 flex-row mb-2 flex-wrap justify-center">
+                {tags.map((tag, index) => (
+                  <li key={index} className="flex items-center gap-x-2 rounded-full text-xs bg-stone-800 text-orange-200 py-1 px-2 mb-2">
+                    <span className="flex items-center">{tag.icon}</span>
+                    <span>{tag.name}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </article>
-        ))}
-      </Carousel>
+          </div>
+          <div className=" flex justify-between p-4 w-full items-center dark:text-orange-200 text-zinc-900">
+            <div>
+            <h2 className="text-xl font-semibold">{title}</h2>
+            </div>
+            <div className="">
+            <a
+          className="flex justify-center items-center dark:text-orange-200 text-stone-800  opacity-80 dark:hover:text-orange-500  hover:text-orange-500 hover:scale-110 transition duration-500 px-3  lg:my-3"
+          href={github}
+          title="GitHub"
+          target="_blank"
+        >
+          <ImGithub className="size-5 lg:size-5 mr-3" />
+          <p>Repositorio</p>
+          <MdOutlineArrowOutward className="ml-2 size-5 lg:size-5" />
+        </a>
+            </div>
+            
+          </div>
+        </article>
+        
+        
+      ))}
     </div>
   );
 }
 
 export default Projectos;
+

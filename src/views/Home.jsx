@@ -12,6 +12,7 @@ import Footer from "./footer.jsx";
 
 import { BsFillPersonCheckFill } from "react-icons/bs";
 import Social from "../components/Social.jsx";
+import { FaLaptopCode } from "react-icons/fa";
 
 function Home() {
   return (
@@ -40,18 +41,18 @@ function Home() {
 
         <Social />
       </section>
-      {/* <section className=" w-full z-30" id="proyectos">
-        <h2 className="font-semibold text-stone-900 dark:text-orange-200  text-3xl flex lg:mt-32 items-center justify-center">
-        <FaLaptopCode className="size-4 lg:size-7" />
+      <section className=" w-full z-30" id="proyectos">
+        <h2 className="font-semibold text-stone-900 dark:text-orange-200  text-3xl flex lg:mt-10 items-center justify-center">
+        <FaLaptopCode className="size-4 lg:size-7 mr-3" />
           Proyectos
         </h2>
         <Projectos />
-      </section> */}
+      </section>
       <section
         className="w-full lg:w-[860px] mx-auto lg:mt-20 mt-5 z-30 "
         id="sobre-mi"
       >
-        <h2 className="font-semibold text-stone-900 dark:text-orange-200 text-2xl mb-6 flex gap-x-3  items-center justify-center">
+        <h2 className="font-semibold text-stone-900 dark:text-orange-200 text-3xl mb-6 flex gap-x-3  items-center justify-center">
           <BsFillPersonCheckFill className="size-6 lg:size-7" />
           Sobre mí
         </h2>

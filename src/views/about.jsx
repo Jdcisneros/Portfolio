@@ -2,9 +2,9 @@ import image from "../assets/ProfileImage.jpeg";
 
 function About() {
   return (
-    <div className="flex md:flex-row lg:flex-row flex-col mb-10 p-5 items-center">
-      <img src={image} alt="ProfileImage" className="rounded-3xl object-cover p-2 w-full h-64 lg:h-72 lg:hover:scale- transition duration-300" />
-      <p className=" ml-5 mb-4 text-pretty text-stone-900 dark:text-orange-200">
+    <div className="flex  flex-col mb-10 p-5 items-center">
+      <img src={image} alt="ProfileImage" className="rounded-full object-cover p-2 lg:w-72 w-64 h-64 lg:h-72 transition duration-300" />
+      <p className=" m-5 text-pretty text-center text-stone-900 dark:text-orange-200 w-[440px] lg:w-[840px] text-xl font-light">
         ¡Hola! Me llamo Jorge Cisneros y soy desarrollador Full Stack. Desde que
         comencé a programar, he desarrollado una verdadera pasión por crear y
         diseñar aplicaciones web. Me especializo en construir interfaces
