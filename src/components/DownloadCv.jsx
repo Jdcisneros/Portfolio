@@ -1,4 +1,5 @@
 
+import { MdDownloadForOffline } from "react-icons/md";
 import curriculumPDF from "../assets/JorgeCisneros.pdf"
 import Download from "./projectosImg/Download.jsx";
 
@@ -17,10 +18,10 @@ function DownloadCV() {
     <div>
       <button 
         onClick={downloadCV}
-        className="flex justify-center items-center dark:text-orange-100 text-stone-800  opacity-80 dark:hover:text-orange-500  hover:text-orange-500 hover:scale-110 transition duration-500 px-3  lg:my-3"
+        className="flex justify-center items-center dark:text-orange-100 text-stone-800  opacity-80 dark:hover:text-orange-500  hover:text-orange-500 hover:scale-110 transition duration-500 px-2  lg:my-2"
           title="Descargar CV"
         >
-        <Download className="size-10 lg:size-[44px]"/>
+        <MdDownloadForOffline className="size-12 lg:size-[53px]"/>
        
       </button>
     </div>
