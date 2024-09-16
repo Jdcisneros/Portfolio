@@ -1,7 +1,7 @@
 
 import { MdDownloadForOffline } from "react-icons/md";
 import curriculumPDF from "../assets/JorgeCisneros.pdf"
-import Download from "./projectosImg/Download.jsx";
+
 
 function DownloadCV() {
   const downloadCV = () => {
