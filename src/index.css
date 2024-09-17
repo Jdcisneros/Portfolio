@@ -70,6 +70,24 @@ body {
     animation: slideInFromRight 1s forwards;
   }
 
+  @keyframes slideInFromBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-slide-in-bottom {
+    animation: slideInFromBottom 1s forwards;
+  }
 
   .dynamic-fill {
     fill: currentColor;
