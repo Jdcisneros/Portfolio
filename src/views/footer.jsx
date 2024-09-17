@@ -6,7 +6,7 @@ function Footer() {
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
        
           <div className="flex flex-col gap-y-3">
-            <p className="dark:text-zinc-900 text-orange-50 w-96 lg:text-2xl text-xl">
+            <p className="dark:text-zinc-900 text-orange-50 lg:w-96 w-80 lg:text-2xl text-xl">
               Estoy abierto a explorar nuevas oportunidades y colaboraciones. Si
               estás interesado en trabajar juntos, no dudes en enviarme un
               correo para discutir cómo podemos lograr grandes cosas.
