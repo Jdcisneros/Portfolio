@@ -89,7 +89,7 @@ function Nav() {
           </button>
           <div className="dark:text-zinc-950 dark:lg:text-orange-200 text-orange-200 lg:text-zinc-900 font-semibold flex flex-col items-center justify-center w-full h-full  lg:flex-row lg:w-auto">
             <a
-              href="#top"
+              href="#inicio"
               className={`hover:scale-110 text-2xl lg:text-xl hover:text-orange-500 px-4 py-2 transition opacity-90 ${
                 activeItem === "inicio"
                   ? " bg-opacity-0   text-orange-500"

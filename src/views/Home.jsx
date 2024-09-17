@@ -15,11 +15,11 @@ import { FaLaptopCode } from "react-icons/fa";
 function Home() {
   return (
     // text-orange-100 text-orange-500
-    <div className=" relative flex flex-col items-center bg-orange-50 dark:bg-zinc-800 transition duration-1000 justify-center ">
+    <div className=" relative flex flex-col items-center bg-orange-50 dark:bg-zinc-950 transition duration-1000 justify-center ">
       <Nav />
       <section
         className="w-[340px] lg:w-full md:w-[440px]  md:m-2 py-32  pb-20 m-3 z-30 transition duration-1000 flex flex-col justify-center"
-        id="top"
+        id="inicio"
       >
         <h3 className="dark:text-orange-100 text-stone-950  text-base font-extralight pb-5 lg:pb-3 lg:text-2xl md:text-2xl text-center  animate-slide-in-bottom ">
           Hola 👋 Mi nombre es Jorge!

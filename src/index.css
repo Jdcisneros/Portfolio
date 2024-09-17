@@ -88,16 +88,3 @@ body {
   .animate-slide-in-bottom {
     animation: slideInFromBottom 1s forwards;
   }
-
-  .dynamic-fill {
-    fill: currentColor;
-  }
-  
-  /* Opcional: estilos adicionales para temas */
-  .dark .dynamic-fill {
-    color: #fa0707; /* Color blanco para modo oscuro */
-  }
-  
-  .light .dynamic-fill {
-    color: #333; /* Color oscuro para modo claro */
-  }

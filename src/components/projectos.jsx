@@ -97,24 +97,24 @@ function Projectos() {
       {PROYECTOS.map(({ title, description, tags, image, github }, index) => (
         <article
           key={index}
-          className="relative group items-center justify-center lg:w-2/6"
+          className="relative group items-center justify-center lg:w-2/6 hover:scale-105 transition-transform duration-300"
         >
           <img
-            className="object-cover w-full lg:w-full h-72 lg:h-96 transition-transform shadow-md  duration-300  rounded-md"
+            className="object-cover w-full lg:w-full h-72 lg:h-96 transition-transform shadow-md  duration-300  rounded-md "
             src={image}
             alt={title}
           />
-          <div className="absolute top-0 left-0 flex items-center lg:w-ful justify-center lg:h-96 h-72 backdrop-blur bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300  text-orange-200 text-center rounded-md">
+          <div className="absolute top-0 left-0 flex items-center lg:w-full justify-center lg:h-96 h-72 backdrop-blur  bg-black bg-opacity-65 opacity-0 group-hover:opacity-100 transition-opacity duration-300  text-orange-200 text-center rounded-md">
             <div className="">
-              <h3 className="text-lg lg:text-2xl text-orange-500 font-semibold mt-2">
+              <h3 className="text-lg lg:text-3xl text-orange-500 font-semibold mt-2">
                 {title}
               </h3>
-              <p className="mb-3 lg:mb-4 p-3 lg:p-5 text-sm">{description}</p>
+              <p className="mb-3 lg:mb-4 p-3 lg:p-5 text-sm lg:text-xl">{description}</p>
               <ul className="flex gap-x-2 flex-row mb-2 flex-wrap justify-center">
                 {tags.map((tag, index) => (
                   <li
                     key={index}
-                    className="flex items-center gap-x-1 lg:gap-x2 rounded-full text-xs bg-stone-800 text-orange-200 py-1 px-2 mb-2"
+                    className="flex items-center gap-x-1 lg:gap-x2 rounded-full text-xs lg:text-lg bg-stone-800 text-orange-200 py-1 px-2 mb-2"
                   >
                     <span className="flex items-center">{tag.icon}</span>
                     <span>{tag.name}</span>
