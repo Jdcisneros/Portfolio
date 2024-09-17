@@ -1,8 +1,6 @@
 import Projectos from "../components/projectos.jsx";
-// import video2 from "../assets/LineasBG.mp4"
-// import bg4 from "../assets/bg6.mp4";
-// import bg1 from "../assets/bg1.jpg"
-// import bg2 from "../assets/bg3.jpg"
+
+
 
 import Nav from "../components/Nav.jsx";
 import About from "./about.jsx";
@@ -17,8 +15,7 @@ import { FaLaptopCode } from "react-icons/fa";
 function Home() {
   return (
     // text-orange-100 text-orange-500
-    <div className=" relative min-h-screen  flex flex-col items-center bg-zinc-200 dark:bg-zinc-900 transition duration-1000 justify-center ">
-    
+    <div className=" relative flex flex-col items-center bg-orange-50 dark:bg-zinc-800 transition duration-1000 justify-center ">
       <Nav />
       <section
         className="w-[340px] lg:w-full md:w-[440px]  md:m-2 py-32  pb-20 m-3 z-30 transition duration-1000 flex flex-col justify-center"
@@ -50,10 +47,10 @@ function Home() {
         <Projectos />
       </section>
       <section
-        className="w-full lg:w-[860px] mx-auto lg:mt-20 mt-5 z-30 "
+        className="w-full lg:w-[860px] mx-auto lg:mt-20 mt-5 z-30 animate-slide-in-bottom "
         id="sobre-mi"
       >
-        <h2 className="font-semibold text-stone-900 dark:text-orange-200 text-3xl mb-6 flex gap-x-3  items-center justify-center">
+        <h2 className="font-semibold text-stone-900 dark:text-orange-200 text-3xl mb-6 flex gap-x-3  items-center justify-center animate-slide-in-bottom">
           <BsFillPersonCheckFill className="size-7 lg:size-7" />
           Sobre mí
         </h2>

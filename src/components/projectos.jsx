@@ -100,11 +100,11 @@ function Projectos() {
           className="relative group items-center justify-center lg:w-2/6"
         >
           <img
-            className="object-cover w-full lg:w-fit h-72 lg:h-96 transition-transform shadow-md  duration-300  rounded-md"
+            className="object-cover w-full lg:w-full h-72 lg:h-96 transition-transform shadow-md  duration-300  rounded-md"
             src={image}
             alt={title}
           />
-          <div className="absolute top-0 left-0 flex items-center lg:w-fit justify-center lg:h-96 h-72 bg-black bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300  text-orange-200 text-center rounded-md">
+          <div className="absolute top-0 left-0 flex items-center lg:w-ful justify-center lg:h-96 h-72 backdrop-blur bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300  text-orange-200 text-center rounded-md">
             <div className="">
               <h3 className="text-lg lg:text-2xl text-orange-500 font-semibold mt-2">
                 {title}
